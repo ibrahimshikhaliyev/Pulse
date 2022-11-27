@@ -1,0 +1,67 @@
+@media (max-width:992px) {
+    .consultation{
+        padding-left: 0;
+        text-align: center;
+    }
+    .title_left{
+        text-align: center;
+        font-size: 31px;
+    }
+    .order-form{
+        margin:36px auto;
+    }
+}
+
+
+
+
+@media (max-width: 768px){
+    .xl-hide{
+        display: none;
+    }
+    .choice{
+
+        &_wrapper{
+            align-items:center;
+            &_title{
+                font-size: 35px;
+            }
+            &_subtitle{
+                font-size: 21px;
+            }
+        }
+    }
+    .benefit_item_title{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px){
+    .header_logo{
+        width: 200px;
+    }
+
+    .choice_wrapper{
+        &_title{
+            font-size: 31px;
+        }
+        &_subtitle{
+            font-size: 18px;
+        }
+    }
+
+    .benefit{
+        &_items{
+            flex-direction: column;
+
+        }
+        &_item{
+            margin: 20px auto;
+
+            &_title{
+                margin-top: 20px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,13 @@
+.consultation{
+    width: 100%;
+    min-height: 680px;
+    padding:100px 0 108px 170px;
+    background: url(../images/consultation_bg.png) center (center/cover) no-repeat;
+    text-align: left;
+    &_subtitle{
+        font-weight: 500;
+        font-size: 20px;
+        color: #FFFFFF;
+        margin-top: 8px;
+    }
+}
