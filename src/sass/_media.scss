@@ -10,6 +10,14 @@
     .order-form{
         margin:36px auto;
     }
+    .catalog-item{
+        margin: 44px;
+    }
+    .catalog_tabs_tab{
+        &:hover{
+            box-shadow: none;
+        }
+    }
 }
 
 
@@ -34,6 +42,26 @@
     .benefit_item_title{
         font-size: 16px;
     }
+    .catalog-item{
+        margin: 20px  auto;
+    }
+    .catalog{
+        
+        &_tabs{
+            flex-direction: column;
+            width: 100%;
+            &_tab{
+                width: 100%;
+                margin: 10px auto;
+                &:hover{
+                    box-shadow:none;
+                }
+            }
+        }
+        &_content{
+            margin-top: 220px;
+        }
+    }
 }
 
 @media (max-width: 576px){
@@ -49,7 +77,14 @@
             font-size: 18px;
         }
     }
-
+    .title_left {
+        text-align: center;
+        font-size: 26px;
+    }
+    .consultation_subtitle {
+        font-size: 17px;
+        
+    }
     .benefit{
         &_items{
             flex-direction: column;
@@ -63,5 +98,12 @@
             }
         }
     }
+    
+    .catalog{
+        .title{
+            font-size: 29px;
+        }
+    }
+    
     
 }

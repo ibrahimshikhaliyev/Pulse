@@ -1,0 +1,123 @@
+.catalog-item{
+    padding: 20px;
+    width: 303px;
+    min-height: 442px;
+    background: #FFFFFF;
+    border: 2px solid #E8E8E8;
+    margin: 5px;
+    overflow: hidden;
+    &_img{
+        display: block;
+        max-width: 100%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    &_title{
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+
+        color: #0D0D0D;
+    }
+    &_descr{
+        margin-top: 15px;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+    &_link{
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #C70101;
+    }
+    hr{
+        background: #E8E8E8;
+        margin-top: 19px;
+        margin-bottom: 21px;
+        border-bottom: none;
+    }
+    &_footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &_old-price{
+        font-weight: 300;
+        font-size: 14px;
+        text-decoration-line: line-through;
+        color: #555555;
+
+    }
+    &_price{
+        font-weight: 700;
+        font-size: 20px;
+        color: #050505;
+    }
+    &_wrapper{
+        display: flex;
+        width:calc(200% + 40px);
+   
+    }
+    &_main-content{
+        width:50%;
+        margin-right:0px;
+        transform: translateX(-100%);
+        transition: 0.5s all;
+        &_active{
+            margin-right: 20px;
+            transform: translateX(0%);
+        }
+    }
+    &_secondary-content{
+        position: relative;
+        width:50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-right: 20px;
+        transition: 0.5s all;
+        padding-left: 19px;
+        margin-bottom: 0;
+        &_active{
+            margin-left: 0px;
+            transform: translateX(-100%);
+        }
+        li{
+            position: relative;
+            list-style-type: none;
+            font-weight: 300;
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 8px;
+            &:before{
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $main-color;
+                left: -14px;
+                top: 7px;
+            }
+        }
+        .catalog-item_back-link{
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);    
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: #C70101;
+        }
+    }
+
+}

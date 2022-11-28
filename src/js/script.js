@@ -32,3 +32,25 @@ $(document).ready(function(){
     });
 });
 
+const more_link= document.querySelectorAll('.catalog-item_link');
+const back_link= document.querySelectorAll('.catalog-item_back-link');
+const catalog_item_main= document.querySelectorAll('.catalog-item_main-content');
+const catalog_item_secondary= document.querySelectorAll('.catalog-item_secondary-content');
+
+for(let i=0; i<more_link.length;i++){
+    more_link[i].addEventListener('click',e=>{
+        catalog_item_main[i].classList.remove('catalog-item_main-content_active');
+        catalog_item_secondary[i].classList.add('catalog-item_secondary-content_active');
+    })
+}
+
+for(let i=0; i<back_link.length;i++){
+    back_link[i].addEventListener('click',e=>{
+        catalog_item_main[i].classList.add('catalog-item_main-content_active');
+        catalog_item_secondary[i].classList.remove('catalog-item_secondary-content_active')
+    })
+}
+
+
+
+

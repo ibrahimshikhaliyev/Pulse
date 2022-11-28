@@ -1,0 +1,48 @@
+.catalog{
+    width: 100%;
+    padding-bottom: 79px;
+    &_tabs{
+        width: 643px;
+        height: 52px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 46px;
+        
+        &_tab{
+            margin: 0 7px;
+            width: 223px;
+            height: 52px;
+            background: #FFFFFF;
+            padding: 17px 0;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #6B6B6B;
+            transform: skewX(-25deg);
+            border: 2px solid #D0D0D0;
+            cursor: pointer;
+            &_active{
+                background: $main-color;
+                color:#FFFFFF;
+                border:0;
+            }
+            &:hover{
+                box-shadow: 18px 0px 49px 1px rgba(232,29,29,0.62);
+            }
+            div{
+                transform: skewX(25deg);
+            }
+
+        }
+    }
+    &_content{
+        margin-top: 57px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // justify-content: space-around;
+    }
+}
