@@ -1,0 +1,48 @@
+.review{
+    width: 100%;
+    padding: 78px 0 48px 0;
+    &_clients{
+       
+
+        &_client{
+            width: 100%;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            &_img{
+                width: 169px;
+                height: 169px;
+                margin-right: 61px;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+            &_content{
+                width: 680px;
+                margin-right: 61px;
+            }
+            &_name{
+                font-weight: 700;
+                font-size: 18px;
+                color: #0D0D0D;
+            }
+            &_mar{
+                font-weight: 500;
+                font-size: 14px;
+                color: #646464;
+                margin-bottom: 10px;
+            }
+            &_descr{
+                
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                color: #0D0D0D;
+            }
+        }
+
+    }
+}

@@ -104,6 +104,21 @@
             font-size: 29px;
         }
     }
-    
+    .review_clients_client{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 70px;
+        &_img{
+            display: block;
+            margin: 0 auto ;
+            margin-bottom: 30px;
+        }
+        &_content{
+            width:100%;
+            margin-right: 0;
+        }
+    }
     
 }
