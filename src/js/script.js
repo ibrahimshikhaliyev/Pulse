@@ -32,6 +32,8 @@ $(document).ready(function(){
     });
 });
 
+// catalog item additional information script
+
 const more_link= document.querySelectorAll('.catalog-item_link');
 const back_link= document.querySelectorAll('.catalog-item_back-link');
 const catalog_item_main= document.querySelectorAll('.catalog-item_main-content');
@@ -50,6 +52,50 @@ for(let i=0; i<back_link.length;i++){
         catalog_item_secondary[i].classList.remove('catalog-item_secondary-content_active')
     })
 }
+
+
+// modal windows script
+
+
+const consultation_btns=document.querySelectorAll('[data-modal="consultation"]');
+const overlay=document.querySelector('.overlay');
+const consultation_modal= document.querySelector('#consultation');
+const order_modal= document.querySelector('#order');
+const thanks_modal=document.querySelector('#thanks');
+const modal_close=document.querySelectorAll('.modal_close');
+const order_btns=document.querySelectorAll('[data-modal="order"]');
+
+window.addEventListener('click',e=>{
+    if(e.target.classList.contains('overlay')){
+        overlay.style.display="none";
+    }
+})
+
+
+consultation_btns.forEach(item=>{
+    item.addEventListener('click' ,e=>{
+        overlay.style.display="block";
+        consultation_modal.style.display="block";
+    })
+})
+
+modal_close.forEach(item=>{
+    item.addEventListener('click',e=>{
+        overlay.style.display="none";
+    })
+})
+
+
+order_btns.forEach(item=>{
+    
+    item.addEventListener('click' ,e=>{
+        overlay.style.display="block";
+        order_modal.style.display="block";
+    })
+})
+
+
+
 
 
 

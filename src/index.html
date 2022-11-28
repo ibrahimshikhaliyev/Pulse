@@ -25,7 +25,7 @@
                     <div class="header_number">
                         <a href="tel:+74999228974">+7 (499) 922-89-74</a>
                     </div>
-                    <button class="button">
+                    <button data-modal="consultation" class="button" >
                         заказать звонок
                     </button>
                 </div>
@@ -48,7 +48,7 @@
                         Ответим на все вопросы
                     </div>
                 </div>
-                <button class="button button_choice">
+                <button data-modal="consultation" class="button button_choice" >
                     заказать кОНСУЛЬТАЦИЮ
                 </button>
                 <div class="choice_wrapper_link">
@@ -137,7 +137,7 @@
                             <div class="catalog-item_old-price">4 750 руб.</div>
                             <div class="catalog-item_price">4 500 руб.</div>
                         </div>
-                        <button class="button button_buy">КУПИТЬ</button>
+                        <button data-modal="order" class="button button_buy">КУПИТЬ</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -164,7 +164,7 @@
                             <div class="catalog-item_old-price">4 750 руб.</div>
                             <div class="catalog-item_price">4 500 руб.</div>
                         </div>
-                        <button class="button button_buy">КУПИТЬ</button>
+                        <button data-modal="order" class="button button_buy">КУПИТЬ</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -191,7 +191,7 @@
                             <div class="catalog-item_old-price">4 750 руб.</div>
                             <div class="catalog-item_price">4 500 руб.</div>
                         </div>
-                        <button class="button button_buy">КУПИТЬ</button>
+                        <button data-modal="order" class="button button_buy">КУПИТЬ</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -218,7 +218,7 @@
                             <div class="catalog-item_old-price">4 750 руб.</div>
                             <div class="catalog-item_price">4 500 руб.</div>
                         </div>
-                        <button class="button button_buy">КУПИТЬ</button>
+                        <button data-modal="order" class="button button_buy">КУПИТЬ</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -245,7 +245,7 @@
                             <div class="catalog-item_old-price">4 750 руб.</div>
                             <div class="catalog-item_price">4 500 руб.</div>
                         </div>
-                        <button class="button button_buy">КУПИТЬ</button>
+                        <button data-modal="order" class="button button_buy">КУПИТЬ</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -272,7 +272,7 @@
                             <div class="catalog-item_old-price">4 750 руб.</div>
                             <div class="catalog-item_price">4 500 руб.</div>
                         </div>
-                        <button class="button button_buy">КУПИТЬ</button>
+                        <button data-modal="order" class="button button_buy">КУПИТЬ</button>
                     </div>
                 </div>
             </div>
@@ -335,6 +335,42 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24820.833744566684!2d49.710663157775805!3d40.487376920799285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403085750a9f3d61%3A0x24e5c126412d760!2sBaku%20Engineering%20University!5e0!3m2!1sen!2s!4v1669664759822!5m2!1sen!2s" width="100%" height="630" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
        
     </section>
+
+    <div class="overlay">
+        
+       <div class="modal" id="consultation">
+            <div class="modal_close">&times;</div>
+            <div class="modal_title">Просто заполните форму заявки</div>
+            <div class="modal_subtitle">и мы перезвоним вам в течении 10 минут</div>
+            <form action="#" class="order-form" >
+                <input type="text" name="name" placeholder="Ваше имя" > 
+                <input type="number" name="phone" placeholder="Ваш телефон">
+                <input type="emain" name="e-mail" placeholder="Ваш mail">
+                <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+       </div>
+       <div class="modal" id="order">
+            <div class="modal_close">&times;</div>
+            <div class="modal_title">Ваш заказ:</div>
+            <div class="modal_subtitle">Пульсометр Polar FT1</div>
+            <form action="#" class="order-form" >
+                <input type="text" name="name" placeholder="Ваше имя" > 
+                <input type="number" name="phone" placeholder="Ваш телефон">
+                <input type="emain" name="e-mail" placeholder="Ваш mail">
+                <button class="button button_submit">Купить</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal_close">&times;</div>
+            <div class="modal_title">Спасибо за вашу заявку!</div>
+            <div class="modal_subtitle">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+
+    </div>
+
+
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
