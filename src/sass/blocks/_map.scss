@@ -48,15 +48,17 @@
         height: 52px;
         border-radius: 100%;
         border:2px solid white;
+        color: #FFFFFF;
+        text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 24px;
-        color: #FFFFFF;
         cursor: pointer;
         &:hover{
             background: #FFFFFF;
             color:red;
+            
         }
     }
     

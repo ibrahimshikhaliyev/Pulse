@@ -30,6 +30,22 @@ $(document).ready(function(){
         }
       ]
     });
+
+    $('form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url : 'mailer/smart.php',
+            data :$(this).serialize()
+        }).done(function(){
+            $(this).find("input").val("");
+            $('#consultation,#order').fadeOut();
+            $('.overlay,#thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        })
+    })
+
 });
 
 // catalog item additional information script
@@ -67,7 +83,7 @@ const thanks_modal=document.querySelector('#thanks');
 const modal_close=document.querySelectorAll('.modal_close');
 const order_btns=document.querySelectorAll('[data-modal="order"]');
 const catalog_item_title=document.querySelectorAll('.catalog-item_title');
-
+const scroll_top_btn=document.querySelector('.arrow-scroll-top')
 
 window.addEventListener('click',e=>{
     if(e.target.classList.contains('overlay')){
@@ -122,8 +138,7 @@ function hide(item) {
 
 
 
-
-
+// ######### input mask in forms 
 
 
 
@@ -132,11 +147,19 @@ var selector = document.querySelectorAll('input[name=phone]');
 var im = new Inputmask("+994 (88) 888-88-88");
 im.mask(selector);
 
-//or
 
-// Inputmask({"mask": "(999) 999-9999"}).mask(selector);
-// Inputmask("9-a{1,3}9{1,3}").mask(selector);
-// Inputmask("9", { repeat: 10 }).mask(selector);
 
-// Inputmask({ regex: "\\d*" }).mask(selector);
-// Inputmask({ regex: String.raw`\d*` }).mask(selector);
+// ### scroll to the top via clicking on the button
+
+
+document.addEventListener('scroll' ,e=>{
+    if(window.pageYOffset>700){
+        scroll_top_btn.style.display="flex";    
+    }else{
+        hide(scroll_top_btn);
+    }
+})
+
+scroll_top_btn.addEventListener('click',e=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+})
