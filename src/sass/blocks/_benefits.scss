@@ -16,6 +16,11 @@
             width: 70px;
             height: 70px;
             margin: 0 auto;
+            &_animated{
+                animation-name:heart;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
         }
         &_title{
             font-weight: 700;
