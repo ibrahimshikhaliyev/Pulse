@@ -8,7 +8,7 @@
 
 # production
 /build
-/mailer
+
 # misc
 .DS_Store
 .env.local
